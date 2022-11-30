@@ -52,6 +52,13 @@ public class RegistroResultado extends AppCompatActivity {
         });
 
 
+        btnSelec2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(RegistroResultado.this, SeleccionPaisEquipo.class);
+                startActivityForResult(i, 1);
+            }
+        });
 
     }
 }

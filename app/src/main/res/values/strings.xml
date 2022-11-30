@@ -4,7 +4,7 @@
     <string name="btn_Consultar">CONSULTAR RESULTADO</string>
     <string name="introducir">Introducir resultado</string>
     <string name="hint_fecha">Introduce la fecha dd/mm/yy</string>
-    <string name="hint_fase">Introduce la fase: Fase grupos, Octavos, Cuartos, Semifinales, Tercer puesto, Fina</string>
+    <string name="hint_fase">Introduce la fase: Fase grupos, Octavos, Cuartos, Semifinales, Tercer puesto, Final</string>
     <string name="hint_equipo1">Seleciona el equipo 1</string>
     <string name="btn_Seleccionar">Seleccionar</string>
     <string name="hint_equipo2">Selecciona el equipo 2</string>
