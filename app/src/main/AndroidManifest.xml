@@ -13,6 +13,13 @@
         android:theme="@style/Theme.EvaluacionT1_DFL"
         tools:targetApi="31">
         <activity
+            android:name=".SeleccionPaisEquipo"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".RegistroResultado"
             android:exported="false">
             <meta-data
