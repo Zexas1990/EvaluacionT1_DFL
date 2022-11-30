@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margen"
+    tools:context=".RegistroResultado">
+
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/introducir"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_view" />
+
+    <EditText
+        android:id="@+id/fecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_fecha"
+        android:paddingVertical="@dimen/margen"
+        android:layout_below="@+id/titulo"/>
+
+    <EditText
+        android:id="@+id/fase1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_fase"
+        android:paddingVertical="@dimen/margen"
+        android:layout_below="@+id/fecha"/>
+
+    <LinearLayout
+        android:id="@+id/liner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fase1"
+        android:paddingVertical="@dimen/margen"
+        >
+
+        <EditText
+            android:id="@+id/primerEquipo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/hint_equipo1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSeleccionar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_Seleccionar"
+            android:textColor="@color/white"
+            android:background="@drawable/bg"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/liner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/liner1"
+        android:paddingVertical="@dimen/margen"
+        >
+
+        <EditText
+            android:id="@+id/segundoEquipo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/hint_equipo2"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSeleccionar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_Seleccionar"
+            android:textColor="@color/white"
+            android:background="@drawable/bg"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/goles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/liner2"
+        android:paddingVertical="@dimen/margen"
+        >
+
+
+        <EditText
+            android:id="@+id/golesEquipo1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/hint_goles1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/separacion_goles"/>
+
+        <EditText
+            android:id="@+id/golesEquipo2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/hint_goles2"
+            />
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGuardarResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_guardar"
+        android:textColor="@color/white"
+        android:background="@drawable/bg"
+        android:layout_above="@+id/btnLimpiar"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLimpiar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_limpiar"
+        android:textColor="@color/white"
+        android:background="@drawable/bg"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

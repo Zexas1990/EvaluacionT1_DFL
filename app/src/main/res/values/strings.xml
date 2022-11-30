@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">EvaluacionT1_DFL</string>
+    <string name="btn_registrar">REGISTRAR RESULTADO</string>
+    <string name="btn_Consultar">CONSULTAR RESULTADO</string>
+    <string name="introducir">Introducir resultado</string>
+    <string name="hint_fecha">Introduce la fecha dd/mm/yy</string>
+    <string name="hint_fase">Introduce la fase: Fase grupos, Octavos, Cuartos, Semifinales, Tercer puesto, Fina</string>
+    <string name="hint_equipo1">Seleciona el equipo 1</string>
+    <string name="btn_Seleccionar">Seleccionar</string>
+    <string name="hint_equipo2">Selecciona el equipo 2</string>
+    <string name="hint_goles1">Goles del equipo 1</string>
+    <string name="hint_goles2">Goles del equipo 2</string>
+    <string name="separacion_goles">" - "</string>
+    <string name="btn_guardar">GUARDAR RESULTADO</string>
+    <string name="btn_limpiar">LIMPIAR DATOS</string>
+</resources>
