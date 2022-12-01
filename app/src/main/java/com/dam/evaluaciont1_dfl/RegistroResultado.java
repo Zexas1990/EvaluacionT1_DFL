@@ -51,21 +51,7 @@ public class RegistroResultado extends AppCompatActivity {
         btnGuardar = findViewById(R.id.btnGuardar);
         btnLimpiar = findViewById(R.id.btnLimpiar);
 
-        private void elegirEquipoUno() {
-            Intent i = new Intent(this, SeleccionPaisEquipo.class);
-            startActivityForResult.launch(i);
-        }
-        ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(
-                new ActivityResultContracts.StartActivityForResult(),
-                new ActivityResultCallback<ActivityResult>() {
-                    @Override
-                    public void onActivityResult(ActivityResult result) {
-                        if (result.getResultCode() == SeleccionPaisEquipo.RESULT_OK_PAIS) {
-                            etPrimer.setText(result.getData().getStringExtra(SeleccionPaisEquipo.NOMBRE_PAIS));
-                        }
-                    }
-                }
-        );
+
 
 
 

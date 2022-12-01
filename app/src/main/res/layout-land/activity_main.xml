@@ -11,9 +11,10 @@
 
 
         <ImageView
-            android:layout_width="1000dp"
-            android:layout_height="200dp"
-            android:src="@drawable/logomundial"
+            android:id="@+id/ImQatar"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:src="@drawable/logo_fifa_qatar_2022"
                 />
 
 
@@ -21,11 +22,10 @@
             android:id="@+id/btnRegistrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:background="@drawable/bg"
             android:text="@string/btn_registrar"
             android:textColor="@color/white"
-            android:layout_marginTop="230dp"/>
+            android:layout_below="@+id/ImQatar"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnConsultar"
