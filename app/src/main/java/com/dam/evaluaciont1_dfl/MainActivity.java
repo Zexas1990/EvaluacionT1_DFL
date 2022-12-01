@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //LOCALIZO EL BOTON Y IMPLEMENTO A LOGICA PARA ABRIR LA SEGUNDA VENTANA
+        //LOCALIZO EL BOTON E IMPLEMENTO A LOGICA PARA ABRIR LA SEGUNDA VENTANA
         btnReg = findViewById(R.id.btnRegistrar);
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override

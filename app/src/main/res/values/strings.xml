@@ -46,7 +46,7 @@
     <string name="btn_suiza">Suiza</string>
     <string name="btn_tunez">Túnez</string>
     <string name="btn_uruguay">Uruguay</string>
-    <string name="hint_pais">Introduce el país selecionado</string>
+    <string name="hint_pais">Pais selecionado</string>
     <string name="btn_aceptar">ACEPTAR</string>
     <string name="btn_Cancelar">CANCELAR</string>
 </resources>

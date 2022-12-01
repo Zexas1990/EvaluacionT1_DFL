@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvSeleccion"
-        android:layout_marginTop="10dp">
+        >
 
         <Button
             android:id="@+id/btnAlemania"
@@ -66,16 +66,6 @@
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:background="@android:color/transparent"/>
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linerPaises2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linerPaises1">
 
         <Button
             android:id="@+id/btnAustralia"
@@ -124,10 +114,10 @@
 
 
     <LinearLayout
-        android:id="@+id/linerPaises3"
+        android:id="@+id/linerPaises2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/linerPaises2">
+        android:layout_below="@id/linerPaises1">
 
         <Button
             android:id="@+id/btnCamerun"
@@ -170,16 +160,6 @@
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:background="@android:color/transparent"/>
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linerPaises4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linerPaises3">
 
         <Button
             android:id="@+id/btnCostaRica"
@@ -226,11 +206,12 @@
 
     </LinearLayout>
 
+
     <LinearLayout
-        android:id="@+id/linerPaises5"
+        android:id="@+id/linerPaises3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/linerPaises4">
+        android:layout_below="@id/linerPaises2">
 
         <Button
             android:id="@+id/btnEcuador"
@@ -273,16 +254,6 @@
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:background="@android:color/transparent"/>
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linerPaises6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linerPaises5">
 
         <Button
             android:id="@+id/btnFrancia"
@@ -331,10 +302,11 @@
 
 
     <LinearLayout
-        android:id="@+id/linerPaises7"
+        android:id="@+id/linerPaises4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/linerPaises6">
+        android:layout_below="@id/linerPaises3">
+
 
         <Button
             android:id="@+id/btnHolanda"
@@ -377,16 +349,6 @@
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:background="@android:color/transparent"/>
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linerPaises8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linerPaises7">
 
         <Button
             android:id="@+id/btnJapon"
@@ -434,10 +396,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linerPaises9"
+        android:id="@+id/linerPaises5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/linerPaises8">
+        android:layout_below="@id/linerPaises4">
+
 
         <Button
             android:id="@+id/btnPolonia"
@@ -481,15 +444,6 @@
             android:textColor="@color/black"
             android:background="@android:color/transparent"/>
 
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linerPaises10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linerPaises9">
 
         <Button
             android:id="@+id/btnSenegal"
@@ -536,19 +490,21 @@
 
     </LinearLayout>
 
+
     <LinearLayout
-        android:id="@+id/linerPaises11"
+        android:id="@+id/linerPaises6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/linerPaises10"
-        android:weightSum="3">
+        android:layout_below="@id/linerPaises5"
+        android:weightSum="6">
+
 
         <Button
             android:id="@+id/btnTunez"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/btn_tunez"
-            android:layout_weight="2"
+            android:layout_weight="5"
             android:paddingTop="0dp"
             android:paddingBottom="0dp"
             android:textSize="12sp"
@@ -562,7 +518,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/btn_uruguay"
-            android:layout_weight="2"
+            android:layout_weight="5"
             android:paddingTop="0dp"
             android:paddingBottom="0dp"
             android:textSize="12sp"
@@ -574,16 +530,10 @@
 
 
 
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/txtPais"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_pais"
-        android:layout_above="@+id/linerBotones"
-        android:textSize="20sp"
-        android:layout_marginBottom="25dp"/>
+
 
 
 
@@ -591,8 +541,16 @@
         android:id="@+id/linerBotones"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_below="@+id/linerPaises6">
 
+
+        <TextView
+            android:id="@+id/txtPais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/hint_pais"
+            android:textSize="28sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnAceptar"

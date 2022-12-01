@@ -1,5 +1,6 @@
 package com.dam.evaluaciont1_dfl;
 
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -20,6 +21,9 @@ public class RegistroResultado extends AppCompatActivity {
     EditText etGoles2;
     Button btnGuardar;
     Button btnLimpiar;
+
+
+
 
 
     @Override
