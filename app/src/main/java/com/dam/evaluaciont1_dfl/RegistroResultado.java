@@ -1,6 +1,9 @@
 package com.dam.evaluaciont1_dfl;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -48,8 +51,22 @@ public class RegistroResultado extends AppCompatActivity {
         btnGuardar = findViewById(R.id.btnGuardar);
         btnLimpiar = findViewById(R.id.btnLimpiar);
 
-        String fecha = etFecha.getText().toString();
-        String fase = etFase1.getText().toString();
+        private void elegirEquipoUno() {
+            Intent i = new Intent(this, SeleccionPaisEquipo.class);
+            startActivityForResult.launch(i);
+        }
+        ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                new ActivityResultCallback<ActivityResult>() {
+                    @Override
+                    public void onActivityResult(ActivityResult result) {
+                        if (result.getResultCode() == SeleccionPaisEquipo.RESULT_OK_PAIS) {
+                            etPrimer.setText(result.getData().getStringExtra(SeleccionPaisEquipo.NOMBRE_PAIS));
+                        }
+                    }
+                }
+        );
+
 
 
 
