@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:text="@string/introducir"
         android:textColor="@color/black"
-        android:textSize="@dimen/txt_view" />
+        android:textSize="@dimen/txt_view"
+        />
 
     <EditText
         android:id="@+id/fecha"
@@ -22,7 +23,8 @@
         android:layout_height="wrap_content"
         android:hint="@string/hint_fecha"
         android:paddingVertical="@dimen/margen"
-        android:layout_below="@+id/titulo"/>
+        android:layout_below="@+id/titulo"
+        android:inputType="datetime"/>
 
     <EditText
         android:id="@+id/fase1"

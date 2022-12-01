@@ -22,7 +22,8 @@
         android:layout_height="wrap_content"
         android:hint="@string/hint_fecha"
         android:paddingVertical="@dimen/margen"
-        android:layout_below="@+id/titulo"/>
+        android:layout_below="@+id/titulo"
+        android:inputType="datetime"/>
 
     <EditText
         android:id="@+id/fase1"
