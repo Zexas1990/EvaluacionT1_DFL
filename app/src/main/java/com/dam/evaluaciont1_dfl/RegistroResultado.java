@@ -51,6 +51,9 @@ public class RegistroResultado extends AppCompatActivity {
 
 
 
+
+
+
         btnSelec1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,6 +68,26 @@ public class RegistroResultado extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(RegistroResultado.this, SeleccionPaisEquipo.class);
                 startActivityForResult(i, 1);
+            }
+        });
+
+
+        btnLimpiar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                etFecha.setText("");
+                etFase1.setText("");
+                etPrimer.setText("");
+                etSegundo.setText("");
+                etGoles1.setText("");
+                etGoles1.setText("");
+            }
+        });
+
+        btnGuardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
 

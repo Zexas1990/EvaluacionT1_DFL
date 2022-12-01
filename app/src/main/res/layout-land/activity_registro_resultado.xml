@@ -39,6 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/fase1"
+        android:layout_marginBottom="5dp"
 
         >
 
@@ -68,6 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/liner1"
+        android:layout_marginTop="5dp"
 
         >
 
@@ -126,26 +128,33 @@
     </LinearLayout>
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnGuardar"
+    <LinearLayout
+        android:id="@+id/linerBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_guardar"
-        android:textColor="@color/white"
-        android:background="@drawable/bg"
-        android:layout_above="@+id/btnLimpiar"
-        />
+        android:layout_below="@id/goles"
+        >
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnLimpiar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_limpiar"
-        android:textColor="@color/white"
-        android:background="@drawable/bg"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentBottom="true"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_guardar"
+            android:textColor="@color/white"
+            android:background="@drawable/bg"
+            android:layout_weight="1"
+            />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLimpiar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_limpiar"
+            android:textColor="@color/white"
+            android:background="@drawable/bg"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
 
 
 </RelativeLayout>
