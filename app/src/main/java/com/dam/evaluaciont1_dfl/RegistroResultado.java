@@ -10,6 +10,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
+import datos.Resultado;
+
 public class RegistroResultado extends AppCompatActivity {
 
     EditText etFecha;
@@ -87,7 +89,14 @@ public class RegistroResultado extends AppCompatActivity {
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String fecha = etFecha.getText().toString();
+                String fase = etFase1.getText().toString();
+                String primer = etPrimer.getText().toString();
+                String segundo = etSegundo.getText().toString();
+                int goles1 = Integer.parseInt(etGoles1.getText().toString());
+                int goles2 = Integer.parseInt(etGoles2.getText().toString());
 
+                Resultado resultado = new Resultado(fecha, fase, primer, segundo, goles1, goles2);
             }
         });
 
