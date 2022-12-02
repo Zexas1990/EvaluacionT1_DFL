@@ -12,10 +12,17 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import datos.Resultado;
 
+
+
 public class RegistroResultado extends AppCompatActivity {
+
+    private ActivityResultLauncher<Intent> selectPais;
+    private ActivityResultLauncher<Intent> selectPais2;
+
 
     EditText etFecha;
     EditText etFase1;
@@ -27,6 +34,7 @@ public class RegistroResultado extends AppCompatActivity {
     EditText etGoles2;
     Button btnGuardar;
     Button btnLimpiar;
+
 
 
 
@@ -54,8 +62,26 @@ public class RegistroResultado extends AppCompatActivity {
 
 
 
-
-
+        selectPais = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                new ActivityResultCallback<ActivityResult>() {
+                    @Override
+                    public void onActivityResult(ActivityResult result) {
+                        if (result.getResultCode() == RESULT_OK) {
+                            etPrimer.setText(result.getData().getStringExtra(SeleccionPaisEquipo.PAIS));
+                        }
+                    }
+                });
+        selectPais2 = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                new ActivityResultCallback<ActivityResult>() {
+                    @Override
+                    public void onActivityResult(ActivityResult result) {
+                        if (result.getResultCode() == RESULT_OK) {
+                            etSegundo.setText(result.getData().getStringExtra(SeleccionPaisEquipo.PAIS));
+                        }
+                    }
+                });
 
 
 
@@ -63,7 +89,7 @@ public class RegistroResultado extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(RegistroResultado.this, SeleccionPaisEquipo.class);
-                startActivityForResult(i, 1);
+                selectPais.launch(i);
             }
         });
 
@@ -72,10 +98,33 @@ public class RegistroResultado extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(RegistroResultado.this, SeleccionPaisEquipo.class);
-                startActivityForResult(i, 1);
+                selectPais2.launch(i);
             }
         });
 
+
+        btnGuardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(etFecha.getText().toString().isEmpty() || etFase1.getText().toString().isEmpty() ||
+                        etPrimer.getText().toString().isEmpty() || etSegundo.getText().toString().isEmpty() ||
+                        etGoles1.getText().toString().isEmpty() || etGoles2.getText().toString().isEmpty()){
+                    Toast.makeText(RegistroResultado.this, "Rellene todos los campos", Toast.LENGTH_SHORT).show();
+                }else{
+                    String fecha = etFecha.getText().toString();
+                    String fase = etFase1.getText().toString();
+                    String primer = etPrimer.getText().toString();
+                    String segundo = etSegundo.getText().toString();
+                    int goles1 = Integer.parseInt(etGoles1.getText().toString());
+                    int goles2 = Integer.parseInt(etGoles2.getText().toString());
+
+                    Resultado resultado = new Resultado(fecha, fase, primer, segundo, goles1, goles2);
+
+                    Toast.makeText(RegistroResultado.this, getString(R.string.datos_guardados), Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
 
         btnLimpiar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,19 +138,7 @@ public class RegistroResultado extends AppCompatActivity {
             }
         });
 
-        btnGuardar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String fecha = etFecha.getText().toString();
-                String fase = etFase1.getText().toString();
-                String primer = etPrimer.getText().toString();
-                String segundo = etSegundo.getText().toString();
-                int goles1 = Integer.parseInt(etGoles1.getText().toString());
-                int goles2 = Integer.parseInt(etGoles2.getText().toString());
 
-                Resultado resultado = new Resultado(fecha, fase, primer, segundo, goles1, goles2);
-            }
-        });
 
     }
 }

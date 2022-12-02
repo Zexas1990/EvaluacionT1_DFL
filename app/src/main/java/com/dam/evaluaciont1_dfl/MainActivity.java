@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         btnCon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, ConsultaResultado.class);
+                startActivity(i);
 
             }
         });

@@ -2,18 +2,25 @@ package com.dam.evaluaciont1_dfl;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class SeleccionPaisEquipo extends AppCompatActivity {
+public class SeleccionPaisEquipo extends AppCompatActivity implements View.OnClickListener {
+
+    public static String PAIS = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);  //Hide the status bar
 
+        //Hide the status bar
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_seleccion_pais_equipo);
 
 
@@ -49,106 +56,94 @@ public class SeleccionPaisEquipo extends AppCompatActivity {
         Button btnSuiza = findViewById(R.id.btnSuiza);
         Button btnTunez = findViewById(R.id.btnTunez);
         Button btnUruguay = findViewById(R.id.btnUruguay);
+        Button btnAceptar = findViewById(R.id.btnAceptar);
+        Button btnCancelar = findViewById(R.id.btnCancelar);
+        TextView txtPais = findViewById(R.id.txtPais);
 
-        findViewById(R.id.btnAlemania).setOnClickListener(v -> {
 
+
+
+        btnAlemania.setOnClickListener(this);
+        btnArabia.setOnClickListener(this);
+        btnArgentina.setOnClickListener(this);
+        btnAustralia.setOnClickListener(this);
+        btnBelgica.setOnClickListener(this);
+        btnBrasil.setOnClickListener(this);
+        btnCamerun.setOnClickListener(this);
+        btnCanada.setOnClickListener(this);
+        btnCorea.setOnClickListener(this);
+        btnCostaRica.setOnClickListener(this);
+        btnCroacia.setOnClickListener(this);
+        btnDinamarca.setOnClickListener(this);
+        btnEcuador.setOnClickListener(this);
+        btnEspana.setOnClickListener(this);
+        btnEstadosUnidos.setOnClickListener(this);
+        btnFrancia.setOnClickListener(this);
+        btnGales.setOnClickListener(this);
+        btnGhana.setOnClickListener(this);
+        btnHolanda.setOnClickListener(this);
+        btnInglaterra.setOnClickListener(this);
+        btnIran.setOnClickListener(this);
+        btnJapon.setOnClickListener(this);
+        btnMarruecos.setOnClickListener(this);
+        btnMexico.setOnClickListener(this);
+        btnPolonia.setOnClickListener(this);
+        btnPortugal.setOnClickListener(this);
+        btnQatar.setOnClickListener(this);
+        btnSenegal.setOnClickListener(this);
+        btnSerbia.setOnClickListener(this);
+        btnSuiza.setOnClickListener(this);
+        btnTunez.setOnClickListener(this);
+        btnUruguay.setOnClickListener(this);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //BOTONES DE ACEPTAR Y CANCELAR
+        findViewById(R.id.btnAceptar).setOnClickListener(v -> {
+            PAIS = txtPais.getText().toString();
+            handleAceptar();
         });
-        findViewById(R.id.btnArabia).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnArgentina).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnAustralia).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnBelgica).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnBrasil).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnCamerun).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnCanada).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnCorea).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnCostaRica).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnCroacia).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnDinamarca).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnEcuador).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnEspana).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnEstadosUnidos).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnFrancia).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnGales).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnGhana).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnHolanda).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnInglaterra).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnIran).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnJapon).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnMarruecos).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnMexico).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnPolonia).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnPortugal).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnQatar).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnSenegal).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnSerbia).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnSuiza).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnTunez).setOnClickListener(v -> {
-
-        });
-        findViewById(R.id.btnUruguay).setOnClickListener(v -> {
-
+        findViewById(R.id.btnCancelar).setOnClickListener(v -> {
+            txtPais.setText("");
         });
 
 
 
+    }
 
+    private void handleAceptar() {
+        TextView txtPais = findViewById(R.id.txtPais);
+        if(txtPais.getText().toString().equals("")){
+
+
+            Toast.makeText(this, getString(R.string.no_seleccionado), Toast.LENGTH_SHORT).show();
+
+        }else{
+            Intent intent = new Intent();
+            intent.putExtra(PAIS, txtPais.getText().toString());
+            setResult(RESULT_OK, intent);
+            finish();
+
+        }
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        Button btn = (Button) view;
+        TextView txtPais = findViewById(R.id.txtPais);
+        txtPais.setText(btn.getText().toString());
     }
 }

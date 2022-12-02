@@ -49,4 +49,7 @@
     <string name="hint_pais">Pais selecionado</string>
     <string name="btn_aceptar">ACEPTAR</string>
     <string name="btn_Cancelar">CANCELAR</string>
+    <string name="no_seleccionado">No has seleccionado ningún país</string>
+    <string name="datos_guardados">Los datos se han registrado</string>
+    <string name="consulta_resultado">Consulta resultados por país</string>
 </resources>
