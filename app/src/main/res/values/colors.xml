@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="redQtar">#B80E37</color>
+    <color name="greyQatar">#FBF2F5</color>
 </resources>

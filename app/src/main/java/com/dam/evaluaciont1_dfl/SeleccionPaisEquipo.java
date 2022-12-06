@@ -23,7 +23,7 @@ public class SeleccionPaisEquipo extends AppCompatActivity implements View.OnCli
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_seleccion_pais_equipo);
 
-
+        String pais;
         Button btnAlemania = findViewById(R.id.btnAlemania);
         Button btnArabia = findViewById(R.id.btnArabia);
         Button btnArgentina = findViewById(R.id.btnArgentina);
@@ -100,28 +100,31 @@ public class SeleccionPaisEquipo extends AppCompatActivity implements View.OnCli
 
 
 
-
-
-
-
-
-
-
-
-
-
         //BOTONES DE ACEPTAR Y CANCELAR
         findViewById(R.id.btnAceptar).setOnClickListener(v -> {
             PAIS = txtPais.getText().toString();
             handleAceptar();
         });
         findViewById(R.id.btnCancelar).setOnClickListener(v -> {
-            txtPais.setText("");
+
+            finish();
         });
 
 
 
     }
+    //GUARDO LA INFORMACION POR SI SE DESTRUYE EL ACTIVITY AL ROTAR LA PANTALLA
+    protected void onSavedInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        outState.putString("PAIS", PAIS);
+    }
+
+    protected void onRestoreInstanceState(Bundle savedInstanceState){
+        super.onRestoreInstanceState(savedInstanceState);
+        PAIS = savedInstanceState.getString("PAIS");
+    }
+
+
 
     private void handleAceptar() {
         TextView txtPais = findViewById(R.id.txtPais);

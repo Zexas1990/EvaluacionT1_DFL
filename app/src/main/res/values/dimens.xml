@@ -2,4 +2,5 @@
 <resources>
     <dimen name="margen">16dp</dimen>
     <dimen name="txt_view">28sp</dimen>
+    <dimen name="magen_liner">25dp</dimen>
 </resources>

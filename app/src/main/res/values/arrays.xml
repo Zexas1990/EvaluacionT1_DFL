@@ -34,4 +34,13 @@
         <item>Tunez</item>
         <item>Uruguay</item>
     </string-array>
+    <string-array name="fases">Fases>
+        <item>Fase de Grupos</item>
+        <item>Octavos</item>
+        <item>Cuartos</item>
+        <item>Semifinales</item>
+        <item>Tercer Puesto</item>
+        <item>Final</item>
+    </string-array>
+
 </resources>

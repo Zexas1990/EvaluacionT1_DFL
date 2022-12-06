@@ -25,11 +25,11 @@
         android:layout_below="@+id/titulo"
         android:inputType="datetime"/>
 
-    <EditText
+    <Spinner
         android:id="@+id/fase1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_fase"
+        android:entries="@array/fases"
         android:paddingVertical="@dimen/margen"
         android:layout_below="@+id/fecha"/>
 
@@ -47,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/hint_equipo1"
+            android:enabled="false"
             />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -76,6 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/hint_equipo2"
+            android:enabled="false"
             />
 
         <androidx.appcompat.widget.AppCompatButton

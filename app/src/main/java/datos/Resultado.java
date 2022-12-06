@@ -2,32 +2,57 @@ package datos;
 
 public class Resultado {
 
-    private String nombre;
+
     private String fase;
+    private String fecha;
     private String primer;
-    private String segundo;
     private int goles1;
+    private String segundo;
     private int goles2;
 
 
-    public Resultado(String nombre, String fase, String primer, String segundo, int goles1, int goles2) {
-        this.nombre = nombre;
+    public Resultado(String fase, String fecha, String primer, int goles1, String segundo, int goles2) {
         this.fase = fase;
+        this.fecha = fecha;
         this.primer = primer;
-        this.segundo = segundo;
         this.goles1 = goles1;
+        this.segundo = segundo;
         this.goles2 = goles2;
     }
 
     @Override
     public String toString() {
         return "Resultado{" +
-                "nombre='" + nombre + '\'' +
-                ", fase='" + fase + '\'' +
+                "fase='" + fase + '\'' +
+                ", fecha='" + fecha + '\'' +
                 ", primer='" + primer + '\'' +
-                ", segundo='" + segundo + '\'' +
                 ", goles1=" + goles1 +
+                ", segundo='" + segundo + '\'' +
                 ", goles2=" + goles2 +
                 '}';
+    }
+
+    public String getFase() {
+        return fase;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public String getPrimer() {
+        return primer;
+    }
+
+    public int getGoles1() {
+        return goles1;
+    }
+
+    public String getSegundo() {
+        return segundo;
+    }
+
+    public int getGoles2() {
+        return goles2;
     }
 }
